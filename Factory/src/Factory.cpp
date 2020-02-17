@@ -36,7 +36,7 @@
 #include <fcntl.h>
 
 volatile sig_atomic_t usr1_flag = 0; /* Indicates whether or not the handler function has been called */
-sem_t *factory_sem; 				 /* Pointer to semaphore */
+sem_t *factory_sem; 		     /* Pointer to semaphore */
 
 /**
  * This function sets usr1_flag to 1 to indicate that the signal has happened or to inform the parent that one of the child processes died.
@@ -87,7 +87,7 @@ int main()
 	}
 
 		/* Prompt the user for the numbers of threads to create */
-	int n_threads = 0; 										   /* Holds the number of worker threads */
+	int n_threads = 0; 	                                   /* Holds the number of worker threads */
 	std::cout << "Enter the number of threads :" << std::endl; /* Get the number of threads to create from the user */
 	std::cin >> n_threads;
 
